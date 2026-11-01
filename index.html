@@ -233,16 +233,19 @@
 
     </div>
 
-    <!-- MUSIK -->
-    <audio id="backgroundMusic" loop>
-        <source src="music/romantic.mp3" type="audio/mpeg">
-    </audio>
+   ```html
+<!-- MUSIK -->
+<audio id="backgroundMusic" loop preload="auto">
+    <source src="music/romantic.mp3" type="audio/mpeg">
+</audio>
 
-    <button class="music-btn" id="musicButton" onclick="toggleMusic()">
-        ♫ Play Music
-    </button>
+<button type="button"
+        class="music-btn"
+        id="musicButton"
+        onclick="toggleMusic()">
+    ♫ Play Music
+</button>
 
-    <script src="script.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
