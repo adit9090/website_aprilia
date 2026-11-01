@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For My Bebe ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ANIMASI HATI -->
+    <div id="hearts"></div>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">♡ For My Bebe</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#letter">Letter</a>
+            <a href="#story">Story</a>
+            <a href="#gallery">Gallery</a>
+        </div>
+    </nav>
+
+    <!-- HALAMAN HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">♡ A Special Gift For You ♡</span>
+
+            <h1>Hi, My <span>Bebe!</span></h1>
+
+            <p>
+                Hai Aprilia, selamat datang di dunia kecil
+                yang aku buat khusus untuk kamu.
+                Semoga kamu suka dengan kejutan sederhana ini.
+            </p>
+
+            <a href="#letter" class="main-btn">
+                Open My Heart ♡
+            </a>
+
+            <div class="hero-heart">💗</div>
+
+            <small>Made with love, just for you.</small>
+
+        </div>
+
+    </section>
+
+    <!-- LOVE LETTER -->
+    <section id="letter" class="section">
+
+        <span class="tag">A message from my heart</span>
+
+        <h2>A Little Love Letter 💌</h2>
+
+        <div class="letter-card">
+
+            <div class="envelope">💌</div>
+
+            <h3>Dear, My Bebe</h3>
+
+            <p>
+                Ada sebuah pesan kecil yang ingin aku
+                sampaikan kepada seseorang yang spesial.
+            </p>
+
+            <button class="main-btn" onclick="openLetter()">
+                Open My Letter ♡
+            </button>
+
+        </div>
+
+    </section>
+
+    
+<!-- LOVE COUNTER -->
+<section class="counter-section">
+
+    <span class="tag">Our time together</span>
+
+    <h2>Every Day With You ♡</h2>
+
+    <div class="counter-card">
+
+        <div class="counter-heart">💗</div>
+
+        <h3 id="loveDays">0 Days</h3>
+
+        <p>
+            Setiap hari bersamamu adalah
+            cerita yang ingin aku ulang.
+        </p>
+
+        <small>Aprilia & Aditya ♡</small>
+
+    </div>
+
+</section>
+
+    <!-- OUR STORY -->
+    <section id="story" class="section story-section">
+
+        <span class="tag">Our beautiful memories</span>
+
+        <h2>Our Little Story 🌷</h2>
+
+        <div class="story-list">
+
+            <div class="story-item">
+                <span>♡ 01</span>
+                <h3>When We First Met</h3>
+                <p>
+                    Sebuah pertemuan sederhana yang
+                    menjadi awal dari cerita kita.
+                </p>
+            </div>
+
+            <div class="story-item">
+                <span>♡ 02</span>
+                <h3>Beautiful Moments</h3>
+                <p>
+                    Setiap tawa, cerita, dan waktu
+                    bersama kamu selalu punya arti.
+                </p>
+            </div>
+
+            <div class="story-item">
+                <span>♡ 03</span>
+                <h3>Our Future</h3>
+                <p>
+                    Aku berharap masih banyak cerita
+                    indah yang bisa kita tulis bersama.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+
+        <span class="tag">Our favorite moments</span>
+
+        <h2>Little Memories 📸</h2>
+
+        <p class="section-desc">
+            Beberapa kenangan yang ingin selalu aku simpan.
+        </p>
+
+
+<div class="gallery">
+    <figure class="polaroid">
+        <img src="images/foto1.png" alt="Kenangan pertama">
+        <figcaption>My Favorite Moment ♡</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="images/foto2.png" alt="Kenangan kedua">
+        <figcaption>With My Bebe 💗</figcaption>
+    </figure>
+
+    <figure class="polaroid">
+        <img src="images/foto3.png" alt="Kenangan ketiga">
+        <figcaption>Forever Memories 🌷</figcaption>
+    </figure>
+</div>
+
+<!-- PEMBESAR FOTO -->
+<div class="photo-modal" id="photoModal" onclick="closePhoto()">
+    <button class="photo-close" aria-label="Tutup">&times;</button>
+    <img id="previewPhoto" src="" alt="Foto kenangan">
+</div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>Made with 💗 by Aditya</h3>
+
+        <p>For Aprilia, My Favorite Person.</p>
+
+        <small>Forever in my heart ♡</small>
+
+    </footer>
+
+    <!-- POPUP SURAT CINTA -->
+    <div class="modal" id="letterModal">
+
+        <div class="modal-content">
+
+            <button class="close" onclick="closeLetter()">×</button>
+
+            <div class="envelope">💗</div>
+
+            <h2>Dear, Bebe Aprilia</h2>
+
+            <p>
+                Hai, Bebe.
+
+                Terima kasih sudah hadir dalam cerita hidup aku.
+
+                Aku mungkin bukan seseorang yang sempurna,
+                dan terkadang aku juga tidak pandai
+                mengungkapkan perasaan.
+
+                Tapi satu hal yang ingin kamu tahu,
+                kamu adalah seseorang yang sangat berarti
+                buat aku.
+
+                Aku berharap kita bisa terus belajar,
+                tumbuh, dan menciptakan banyak kenangan
+                indah bersama.
+
+                Jangan lupa bahagia, ya, Bebe.
+
+                I Love You! ❤️
+            </p>
+
+            <div class="signature">
+                With Love, Aditya ♡
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MUSIK -->
+    <audio id="backgroundMusic" loop>
+        <source src="music/romantic.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="musicButton" onclick="toggleMusic()">
+        ♫ Play Music
+    </button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
