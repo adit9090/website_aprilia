@@ -62,41 +62,65 @@ function createHeart() {
 
 setInterval(createHeart, 600);
 
+
+
+
+// ==================================
+// ROMANTIC BACKGROUND MUSIC
+// ==================================
+
 // ==================================
 // ROMANTIC BACKGROUND MUSIC
 // ==================================
 
 const music = document.getElementById("backgroundMusic");
-
 const musicButton = document.getElementById("musicButton");
+
+let isPlaying = false;
 
 async function toggleMusic() {
 
-    if (music.paused) {
+    try {
 
-        try {
+        if (music.paused) {
+
+            music.volume = 1;
 
             await music.play();
 
+            isPlaying = true;
             musicButton.innerHTML = "♫ Pause Music";
 
-        } catch (error) {
+        } else {
 
-            alert(
-                "Musik belum tersedia. Periksa file romantic.mp3 kamu."
-            );
+            music.pause();
+
+            isPlaying = false;
+            musicButton.innerHTML = "♫ Play Music";
 
         }
 
-    } else {
+    } catch (error) {
 
-        music.pause();
+        console.error("Music Error:", error);
 
-        musicButton.innerHTML = "♫ Play Music";
+        alert("Musik gagal diputar. Periksa file romantic.mp3!");
 
     }
 
 }
+
+// Sinkronisasi tombol jika musik berhenti atau selesai
+
+music.addEventListener("pause", function() {
+    isPlaying = false;
+    musicButton.innerHTML = "♫ Play Music";
+});
+
+music.addEventListener("play", function() {
+    isPlaying = true;
+    musicButton.innerHTML = "♫ Pause Music";
+});
 
 // ==================================
 // POLAROID PHOTO PREVIEW
@@ -122,56 +146,4 @@ function closePhoto() {
         .getElementById("photoModal")
         .classList.remove("show");
 
-}
-
-/* ==================================
-   LOVE COUNTER
-================================== */
-
-.counter-section {
-    padding: 90px 20px;
-    text-align: center;
-    background: linear-gradient(
-        135deg,
-        #ffe6ef,
-        #fff7fa
-    );
-}
-
-.counter-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 38px;
-    color: #80536a;
-    margin-bottom: 30px;
-}
-
-.counter-card {
-    max-width: 450px;
-    margin: auto;
-    padding: 40px 25px;
-    background: white;
-    border-radius: 25px;
-    box-shadow: 0 10px 35px #d98ba525;
-}
-
-.counter-heart {
-    font-size: 55px;
-    animation: heartbeat 1.4s infinite;
-}
-
-.counter-card h3 {
-    font-size: 42px;
-    color: #e77da5;
-    margin: 15px 0;
-}
-
-.counter-card p {
-    color: #98778a;
-    line-height: 1.8;
-    margin-bottom: 15px;
-}
-
-.counter-card small {
-    color: #d96e98;
-    font-weight: 700;
 }
